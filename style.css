@@ -27,7 +27,7 @@ body {
         box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
         
         font-family: 'Releway';
-        font-weight: 700;
+        font-weight: bolder;
         & .logo {
             display: flex;
             
@@ -51,19 +51,18 @@ body {
     }
 }
 
-main {
+#Home {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: fr ;
+    height: 90%;    
 
     & .Hello {
         display: grid;
         justify-content: center;
         align-items: center;
         
-
         font-family: 'Releway';
         font-weight: bold;
         font-size: 2rem;
@@ -79,13 +78,23 @@ main {
         border-radius: 20px;
         background: #190f2f;
         border-radius: 13px;
-        width: 70%;
+        width: 90%;
         height:fit-content;
     }
 
     & .Hello p {
-        font-size: 20px;
-        font-weight: 700;
+        color: #3e3e3e;
+        justify-self: center;
+        font-family: 'Releway' ;
+        font-size: 17px;
+        font-weight: bolder;
+
+    }
+
+    & .Hello h1 {
+        font-family: 'Releway';
+        font-weight: lighter;
+        font-size: 4rem;
     }
 
     & .Avatar {
@@ -97,7 +106,20 @@ main {
     }
 
     & .contat {
-        justify-self: flex-end;
-        background-color: crimson;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 7px;
+        margin: 0 1rem 0 0;
+        color: #7B4AE2;
+        
+        align-self: center;
+        justify-self: flex-end;;
     }
+}
+
+/*Sobre Mim*/
+#Sobre {
+    
 }
