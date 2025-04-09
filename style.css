@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Releway';
 }
 
 body {
@@ -47,6 +45,7 @@ body {
         & a {
             color: #828282;
             text-decoration: none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     }
 }
@@ -56,7 +55,7 @@ body {
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 90%;    
+    height: 90vh;    
 
     & .Hello {
         display: grid;
@@ -70,16 +69,19 @@ body {
         color: #FFFFFF;
 
     } & .Hello .sd {
-        border: 1px solid #000000;
         color: #7B4AE2;
-        font-weight: bold;
+        font-family: 'Releway';
+        font-size: 25px;
+        font-weight: bolder;
         text-align: center;
-        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+        
+        
+        width: 62%;
+        margin-bottom: 1.5em;
         background: #190f2f;
         border-radius: 13px;
-        width: 90%;
-        height:fit-content;
+        
     }
 
     & .Hello p {
@@ -108,44 +110,150 @@ body {
         border-radius: 50%;
     }
         
-    }& .Avatar img {
+    }& .Avatar .Eu {
         width: 75%;
         height: 75%;
 
         border-radius: 50%;
         box-shadow: 1px 1px 12px 0px #190f2f;
+        transition: all 0.5s ease-in-out;
     }
 
-    .Avatar img::before {
-        content: '';
-        background-image: url(./assets/icons/Figma.png);
+    & .Avatar:hover .Eu {
+        box-shadow: 1px 1px 12px 0px #7B4AE2;
+        transition: all 0.5s ease-in-out;
+    }
+
+    & .TksNd, & .TksRt, & .TksTp {
         display: flex;
-        
         justify-content: center;
-        align-items: center;        
+        align-items: center;
         
-        width: 100%;
-        height: 100%;
+        width: 4%;
+        height: 8.5%;
+
+        position: absolute;
+        border-radius: 20%;
+        background: rgb(0 0 0 / 18%);
         border-radius: 50%;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;;
+    }
+    
+    & .TksNd {
+        top: 40%;
+        left: 59%;
+        animation: float2 infinite ease-in-out 5s ;
+        
+    }
+    & .TksNd:hover, & .TksRt:hover, & .TksTp:hover {
+        transition: all 0.5s ease-in-out;
+        box-shadow: 1px 1px 12px 0px #7B4AE2;
         
     }
 
+    & .TksRt {
+        bottom: 30%;
+        right: 37%;
+        animation: float infinite ease-in-out 3s;
+    }
+
+    & .TksTp {
+        bottom: 51%;
+        left: 37%;
+        animation: float1 infinite ease-in-out 4s;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(1px, -1px);
+        }
+        50% {
+            transform: translate(0, -2px);
+        }
+        75% {
+            transform: translate(-1px, -1px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+    @keyframes float2 {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(3px, -3px);
+        }
+        50% {
+            transform: translate(0, -6px);
+        }
+        75% {
+            transform: translate(-3px, -3px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+    @keyframes float1 {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(-3px, 3px);
+        }
+        50% {
+            transform: translate(0, 6px);
+        }
+        75% {
+            transform: translate(3px, 3px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    & .Node, & .React, & .Type {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 50%;
+    }
 
     & .contat {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
-        text-align: left;
-        justify-content: center;
+        align-items: flex-end;
+        width: 80%;
+         
         gap: 7px;
         
-        color: #7B4AE2;
-        
-        align-self: center;
-        
+        color: #7a4ae258;
     }
-}
+
+    & .Cv {
+        display: flex;
+        gap: 10px;
+    }
+
+    & .whatsap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        border: 1px solid #7a4ae258;
+        width: 12vw;
+        height: 5vh;
+        border-radius: 15px;
+
+        color: #7a4ae258;
+    }
+
 
 /*Sobre Mim*/
 #Sobre {
