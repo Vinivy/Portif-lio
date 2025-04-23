@@ -284,8 +284,9 @@ body {
     grid-template-areas:
         "programa programa programa"
         "Infos Infos Infos";
-    grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: max-content max-content max-content;
     grid-template-rows: min-content min-content;
+    justify-content: center;
 
     width: 100%;
 
@@ -296,7 +297,7 @@ body {
     & .programa {
         grid-area: programa;
         display: grid;
-        grid-template-columns: min-content min-content min-content;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100%;
 
         align-content: flex-end;
@@ -314,7 +315,7 @@ body {
     & .Programador, .Trabalho, .Mobille {
         border-radius: 13px;
         border: 1px solid #7B4AE2;
-        width: 17.5vw;
+        width: 100%;
         padding: 30px;
 
         gap: 1rem;
@@ -322,26 +323,14 @@ body {
         text-align: center;
     }
 
+    .Trabalho {
+        background: #26144b30;
+    }
+
     & .programa ion-icon {
         color: #7B4AE2;
         font-size: 2rem;
         margin-bottom: 10px;
-    }
-
-    & .Trabalho {
-        background: #26144b30;
-    }
-    
-    & .trabalho {
-        grid-area: trabalho;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        
-        background: #5100ff;
-        border-radius: 13px;
     }
 
     & .Exp {
@@ -370,7 +359,7 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 55%;
+        width: 100%;
         height: 60%;
         margin-bottom: 4rem;
         
@@ -392,6 +381,7 @@ body {
 
         text-align: center;
     }
+
 }
 
 /* Responsividade para Tablet */
@@ -401,6 +391,7 @@ body {
     }
 
     header {
+        display: none;
         flex-direction: column;
         height: auto;
         padding: 1rem;
@@ -448,11 +439,13 @@ body {
     #Sobre .programa {
         grid-template-columns: 1fr;
         row-gap: 1rem;
+        margin: 0;
+        align-content: baseline;
     }
 
     #Sobre .Programador, #Sobre .Trabalho, #Sobre .Mobille {
         width: 80%;
-        padding: 20px;
+        padding: 0px;
     }
 
     #Sobre .container {
