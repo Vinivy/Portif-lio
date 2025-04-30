@@ -28,6 +28,10 @@ body {
         font-family: 'Releway';
         font-weight: bolder;
 
+        & .mobilesLogo {
+            display: none;
+        }
+
         & .logo {
             display: flex;
             
@@ -388,10 +392,54 @@ body {
 @media (max-width: 768px) {
     body {
         grid-template-rows: 10vh auto;
+
+        & header {
+            display: none;
+        }
+
+        & .TksNd, & .TksRt, & .TksTp {
+            width: 8%;
+            height: 11.5%;
+        }
+
+        & .TksNd {
+            top: 31%;
+            left: 69%;
+        }
+
+        & .TksTp {
+            bottom: 45%;
+            left: 20%;
+        }
+
+        & .TksRt {
+            bottom: 26%;
+            right: 26%;
+        }
     }
 
-    header {
-        display: none;
+    
+    .mobilesLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1rem;
+
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .mobilesLogo ion-icon {
+        color: #787878;
+        font-size: 2rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .mobilesLogo ion-icon:hover {
+        color: #7B4AE2;
+        transition: all 0.5s ease;
+        cursor: pointer;
     }
 
     #Home {
@@ -408,11 +456,15 @@ body {
     #Home .Hello {
         grid-area: Hello;
         font-size: 1.5rem;
+        justify-content: start;
     }
 
     #Home .Hello .sd {
         font-size: 20px;
         width: 80%;
+        border-radius: 10px;
+        width: 60%;
+        box-shadow: none;
     }
 
     #Home .Hello h1 {
@@ -434,8 +486,10 @@ body {
         grid-area: contat;
         display: flex;
         flex-direction: row;
-        width: 90%;
+        width: 100%;
         justify-content: center;
+        
+        align-items: center;
     }
 
     #Home .contat .whatsap {
@@ -473,6 +527,11 @@ body {
     #Sobre .infos {
         display: none;
     }
+
+    .icons {
+        display: none;
+    }
+    
 }
 
 /* Responsividade para Celular */
