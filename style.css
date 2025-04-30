@@ -392,28 +392,21 @@ body {
 
     header {
         display: none;
-        flex-direction: column;
-        height: auto;
-        padding: 1rem;
-    }
-
-    header .logo img {
-        width: 20%;
-    }
-
-    header nav {
-        margin-right: 0;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 
     #Home {
+        grid-template-areas: 
+            "Avatar"
+            "Hello "
+            "contat ";
         grid-template-columns: 1fr;
         height: auto;
         padding: 2rem;
+        row-gap: 2rem;
     }
 
     #Home .Hello {
+        grid-area: Hello;
         font-size: 1.5rem;
     }
 
@@ -426,26 +419,48 @@ body {
         font-size: clamp(1.5rem, 4vw, 3rem);
     }
 
+    #Home .Avatar {
+        grid-area: Avatar;
+        width: 100%;
+        height: auto;
+    }
+
     #Home .Avatar .Eu {
         width: 60%;
         height: 60%;
     }
 
+    #Home .contat {
+        grid-area: contat;
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: center;
+    }
+
+    #Home .contat .whatsap {
+        width: 35%;
+        height: 7vh;
+    }
+
     #Sobre {
         grid-template-columns: 1fr;
+        grid-template-rows: max-content;
         row-gap: 1.5rem;
     }
 
     #Sobre .programa {
         grid-template-columns: 1fr;
+        grid-template-rows: max-content;
         row-gap: 1rem;
-        margin: 0;
-        align-content: baseline;
+        margin-top: 2rem;
     }
 
     #Sobre .Programador, #Sobre .Trabalho, #Sobre .Mobille {
-        width: 80%;
-        padding: 0px;
+        border-radius: 20px;
+        width: 50%;
+        height: 140px;
+        padding: 19px;
     }
 
     #Sobre .container {
@@ -453,6 +468,10 @@ body {
         width: 90%;
         height: auto;
         padding: 1rem;
+    }
+
+    #Sobre .infos {
+        display: none;
     }
 }
 
