@@ -28,10 +28,6 @@ body {
         font-family: 'Releway';
         font-weight: bolder;
 
-        & .mobilesLogo {
-            display: none;
-        }
-
         & .logo {
             display: flex;
             
@@ -61,6 +57,10 @@ body {
             transition: all 0.5s ease-in-out;
         }
     }
+}
+
+main .mobilesLogo {
+    display: none;
 }
 
 #Home {
@@ -156,8 +156,8 @@ body {
         justify-content: center;
         align-items: center;
         
-        width: 4%;
-        height: 8.5%;
+        width: 5vw;
+        height: 9vh;
 
         position: absolute;
         border-radius: 20%;
@@ -398,8 +398,9 @@ body {
         }
 
         & .TksNd, & .TksRt, & .TksTp {
-            width: 8%;
-            height: 11.5%;
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
         }
 
         & .TksNd {
@@ -419,7 +420,7 @@ body {
     }
 
     
-    .mobilesLogo {
+    main .mobilesLogo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -455,8 +456,9 @@ body {
 
     #Home .Hello {
         grid-area: Hello;
-        font-size: 1.5rem;
         justify-content: start;
+        font-size: 1.5rem;
+        padding-left: 7rem;
     }
 
     #Home .Hello .sd {
@@ -488,12 +490,12 @@ body {
         flex-direction: row;
         width: 100%;
         justify-content: center;
-        
+        gap: 5rem;
         align-items: center;
     }
 
     #Home .contat .whatsap {
-        width: 35%;
+        width: 28%;
         height: 7vh;
     }
 
@@ -547,14 +549,43 @@ body {
         gap: 0.5rem;
     }
 
+    body {
+        & .TksNd, & .TksRt, & .TksTp {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+        }
+    
+        & .TksNd {
+            top: 19%;
+            left: 62%;
+        }
+    
+        & .TksTp {
+            bottom: 68%;
+            left: 23%;
+        }
+    
+        & .TksRt {
+            bottom: 62%;
+            right: 26%;
+        }
+    }
+
+    .mobilesLogo ion-icon {
+        font-size: 1.5rem;
+    }
+
     #Home .Hello {
         font-size: 1.2rem;
+        padding: 0;
+        justify-content: center;
         gap: 0.5rem;
     }
 
     #Home .Hello .sd {
         font-size: 18px;
-        width: 90%;
+        
     }
 
     #Home .Hello h1 {
@@ -562,12 +593,21 @@ body {
     }
 
     #Home .Avatar .Eu {
-        width: 50%;
-        height: 50%;
+        width: 58%;
+        
+    }
+
+    #Home .contat {
+        gap: 2rem;
+    }
+
+    #Home .contat .whatsap {
+        width: 37vw;
+        height: 7vh;
     }
 
     #Sobre .Programador, #Sobre .Trabalho, #Sobre .Mobille {
-        width: 90%;
+        width: 50%;
         padding: 15px;
     }
 
@@ -575,4 +615,6 @@ body {
         width: 100%;
         padding: 0.5rem;
     }
+
+    
 }
