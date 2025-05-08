@@ -386,7 +386,72 @@ main .mobilesLogo {
         text-align: center;
     }
 
+    
 }
+
+#Me {
+    display: grid;
+    grid-template-areas: 
+        "image SobreMim"
+        "image Bio"
+        ;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+
+    margin :2rem 0 2rem 0;
+
+    & img {
+        grid-area: image;
+        width: 60%;	
+        border-radius: 50%;
+        box-shadow: 1px 1px 12px 0px #7B4AE2;
+        
+    }
+    
+    & .SobreMim {
+        grid-area: SobreMim;
+        display: flex;
+        justify-content: center;
+        justify-self: left;
+        align-items: center;
+        width: clamp(20%, 20%, 50%);
+        height: clamp(20%, 50%, 80%);
+        
+        color: #7B4AE2;
+        font-family: 'Releway';
+        font-size: 20px;
+        font-weight: bold;
+
+        background: #27164a84;
+        border-radius: 13px;
+        
+    }
+
+    & .Bio{
+        grid-area: Bio;
+        display: flex;
+        flex-direction: column; 
+        gap: 6px;
+    }
+
+    & .Bio h1 {
+        color: #FFFFFF;
+        font-size: 70px;
+        font-weight: bold;
+    }
+
+    & p {
+        color: #7d7b7b;
+        font-size: 16px;
+
+        font-weight: regular;
+    }
+
+}
+
+
 
 /* Responsividade para Tablet */
 @media (max-width: 768px) {
