@@ -418,8 +418,8 @@ main .mobilesLogo {
         justify-content: center;
         justify-self: left;
         align-items: center;
-        width: clamp(20%, 20%, 50%);
-        height: clamp(20%, 50%, 80%);
+        width: clamp(20%, 50%, 50%);
+        height: clamp(20%, 30%, 80%);
         
         color: #7B4AE2;
         font-family: 'Releway';
@@ -452,9 +452,89 @@ main .mobilesLogo {
     }
 }
 
-     #Projects {
+#Projects {
+    display: grid;
+    grid-template-rows:
+    minmax(100px, 10%) minmax(110px, 84%) minmax(40px, 1%)
+    ;
+    grid-template-columns: minmax(300px, 1fr) ;
+    justify-self: center;
+
+    gap: 2rem;
+    width: 90%;
+
+    margin :2rem 0 2rem 0;
+
+    & .hed {
         display: grid;
-     }
+        justify-content: start;
+        align-items: center;
+
+        gap: 1rem;
+        height: fit-content;
+        
+        border-radius: 13px;
+    }
+
+    & .hed span {
+        font-size: 13px;
+        font-weight: bold;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 10px;
+        color: #7B4AE2;
+        padding: 7px;
+        background: #27164a84;
+    } 
+
+    & .hed h1 {
+        color: #FFFFFF;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    & .Gits {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+    }   
+
+    & .Gits div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border: 1px solid #7B4AE2;
+        height: calc(350px - 1rem);
+        border-radius: 12px;
+        padding: 15px;
+    }
+
+    & .Gits div h3 {
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    & .Gits div p {
+        color: #7d7b7b;
+        font-size: 16px;
+        font-weight: regular;
+    }
+
+    & .Mais {
+        display: flex;
+        justify-self: flex-end;
+        justify-content: end;
+        align-items: center;
+        gap: 5px;
+
+        width: fit-content;
+        height: 5vh;
+
+        color: #7a4ae258;
+    }
+}
 
 
 /* Responsividade para Tablet */
@@ -488,7 +568,6 @@ main .mobilesLogo {
         }
     }
 
-    
     main .mobilesLogo {
         display: flex;
         justify-content: center;
@@ -602,19 +681,82 @@ main .mobilesLogo {
     .icons {
         display: none;
     }
+
+    #Me {
+        grid-template-areas:
+        "image" 
+        "SobreMim"
+        "Bio";
+        height: 125vh;
+        align-items: flex-end;
+        
+        & img {
+            grid-area: image;
+            width: 40%;
+        }
+
+        & .SobreMim {
+            grid-area: SobreMim;
+            justify-self: center;
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+
+        & .Bio {
+            grid-area: Bio;
+            justify-self: center;
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+        }
+    }
+
+    #Projects {
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto;
+        
+        gap: 1rem;
+        width: 100%;
+
+        & .hed {
+        justify-content: flex-start;
+        padding: 0 0 0 2rem;
+        text-align: center;
+        gap: 0.5rem;
+        }
+
+        & .hed h1 {
+        font-size: 1.5rem;
+        }
+
+        & .Gits {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        
+        gap: 1rem;
+        padding: 1rem 2rem;
+        }
+
+        & .Gits div {
+        height: auto;
+        padding: 10px;
+        }
+
+         & .Gits div p {
+            font-size: 14px;
+         }
+
+        & .Mais {
+        justify-content: center;
+        width: 100%;
+        }
+    }
+
     
 }
 
-& #Me {
-    grid-template-areas:
-    "image" 
-    "SobreMim"
-    "Bio";
 
-    & img {
-        width: 40%;
-    }
-}
+
 /* Responsividade para Celular */
 @media (max-width: 480px) {
     header {
@@ -680,9 +822,18 @@ main .mobilesLogo {
         gap: 2rem;
     }
 
+    #Home .contat .Cv {
+        font-size: 14px;
+        width: 40%;
+        height: 5vh;
+        gap: 3%;
+     }
+
     #Home .contat .whatsap {
-        width: 37vw;
-        height: 7vh;
+        width: 70%;
+        padding: 7px;
+        font-size: 14px;
+        height: fit-content;
     }
 
     #Sobre .Programador, #Sobre .Trabalho, #Sobre .Mobille {
@@ -695,5 +846,25 @@ main .mobilesLogo {
         padding: 0.5rem;
     }
 
-    
+    #Me {
+        height: 100vh;
+
+        & .Bio h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        & .Bio p {
+            font-size: clamp(0.8rem, 2vw, 1rem);
+        }
+    }
+
+    #Projects {
+
+        & .Gits div {
+            text-align: center;
+        }
+        & .Gits div p {
+            font-size: 10px;
+        }
+    }
 }
