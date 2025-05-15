@@ -602,7 +602,7 @@ main .mobilesLogo {
     }
 
     & .Videos .container .infos span {
-        color: #7d7b7b;
+        color: #7B4AE2;
         font-size: 12px;
         font-weight: bold;
     }
@@ -819,16 +819,28 @@ main .mobilesLogo {
         }
 
         & .Gits {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        
-        gap: 1rem;
-        padding: 1rem 2rem;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: 1fr;
+            
+            overflow-x: auto;
+            gap: 1rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+        }
+
+        & .Gits::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
 
         & .Gits div {
-        height: auto;
-        padding: 10px;
+            width: min(70vw, 278px);
+            height: min(55vw, 278px);
+            scroll-snap-align: start;
+            padding: 10px;
         }
 
          & .Gits div p {
@@ -840,6 +852,44 @@ main .mobilesLogo {
         width: 100%;
         }
     }
+
+    #VideosProjects {
+            & .Videos {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-rows: 1fr;
+                height: 50vh;
+                overflow-x: auto;
+                gap: 1rem;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE 10+ */
+            }
+
+            & .Videos .container {
+                height: min(50vw, 31vw);
+                width: min(70vw, 37vw);
+                padding: 10px;
+            }
+
+            & .Videos div .infos {
+                display: flex;
+               flex-direction: column;
+            }
+
+            & .Videos .container .infos h3 {
+                font-size: 1rem;
+            }
+
+            & .Videos .container p {
+                font-size: 12px;
+            }
+
+            & .Videos .container video {
+                height: 150px;
+            }
+        }
 
     
 }
