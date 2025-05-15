@@ -1012,4 +1012,43 @@ main .mobilesLogo {
             font-size: 10px;
         }
     }
+
+    #VideosProjects {
+        & .Videos {
+            grid-auto-flow: column;
+            grid-template-rows: 1fr;
+            grid-template-columns: unset;
+            overflow-x: auto;
+            gap: 1rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            height: 40vh;
+        }
+
+        & .Videos::-webkit-scrollbar {
+            display: none;
+        }
+
+        & .Videos .container {
+            min-width: 80vw;
+            width: 80vw;
+            height: 200px;
+            padding: 10px;
+            scroll-snap-align: start;
+        }
+
+        & .Videos .container video {
+            height: 120px;
+        }
+
+        & .Videos .container .infos h3 {
+            font-size: 1rem;
+        }
+
+        & .Videos .container p {
+            font-size: 12px;
+        }
+    }
 }
