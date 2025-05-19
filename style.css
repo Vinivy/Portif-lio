@@ -281,7 +281,6 @@ main .mobilesLogo {
         color: #7a4ae258;
     }
 
-
 /*Sobre Mim*/
 #Sobre {
     display: grid;
@@ -621,6 +620,24 @@ main .mobilesLogo {
         border-radius: 12px;
     }
 }
+
+    #Skills {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        background-color: #828282;
+        justify-items: center;
+        gap: 2rem;
+        width: 90%;
+        
+        justify-self: center;
+
+        & .Title {
+            width: min( 80vw, 100px);
+            height: min(80vh, 100px);
+            background: ;
+        }
+    }
 
 /* Responsividade para Tablet */
 @media (max-width: 768px) {
