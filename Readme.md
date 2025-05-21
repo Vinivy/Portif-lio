@@ -22,6 +22,8 @@ Sou um desenvolvedor apaixonado por tecnologia, sempre em busca de novos desafio
 
 Basta acessar o site pelo navegador para conhecer meu trabalho. Fique à vontade para entrar em contato ou sugerir melhorias!
 
+- [Acesse o projeto finalizado, online] (https://vinivy.github.io/Portif-lio/)
+
 ---
 
 Obrigado pela visita! 🚀
